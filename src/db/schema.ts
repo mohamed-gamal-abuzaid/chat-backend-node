@@ -1,10 +1,10 @@
-import{users} from '../db/models/users';
-import {groups}from '../db/models/groups';
-import {groupMembers}from '../db/models/groupMembers';
-import {messages}from '../db/models/messages';
-import {notifications}from '../db/models/notifications';
+import{users} from './models/users';
+import {groups}from './models/groups';
+import {groupMembers}from './models/groupMembers';
+import {messages}from './models/messages';
+import {notifications}from './models/notifications';
 
-export const schema = {
+export {
   users,
   groups,
   groupMembers,
