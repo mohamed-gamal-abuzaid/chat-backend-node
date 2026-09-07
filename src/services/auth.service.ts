@@ -35,9 +35,9 @@ export class AuthService {
     if (!isPasswordValid) throw new Error('Invalid email or password');
 
     const token = jwt.sign(
-      { userId: user.id, email: user.email },
-      process.env.JWT_SECRET || 'secret',
-      { expiresIn: '1d' }
+      { id: user.id, email: user.email }, 
+      process.env.JWT_SECRET!, 
+      { expiresIn: '7d' }
     );
 
     return { token, user: { id: user.id, name: user.name, email: user.email } };

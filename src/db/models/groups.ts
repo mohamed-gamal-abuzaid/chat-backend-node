@@ -4,6 +4,6 @@ import { users } from './users';
 export const groups = pgTable('groups', {
   id: serial('id').primaryKey(),
   name: varchar('name', { length: 100 }).notNull(),
-  createdBy: integer('created_by').references(() => users.id).notNull(), // Admin creator
+  createdBy: integer('created_by').references(() => users.id).notNull(), 
   createdAt: timestamp('created_at').defaultNow().notNull(),
 });
